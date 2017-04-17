@@ -11,5 +11,10 @@ pipeline {
         sleep 6
       }
     }
+    stage('Deploy') {
+      steps {
+        fileExists 'readme'
+      }
+    }
   }
 }
