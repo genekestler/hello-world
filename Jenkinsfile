@@ -6,5 +6,10 @@ pipeline {
         echo 'first step of the pipe'
       }
     }
+    stage('Testing') {
+      steps {
+        sleep 6
+      }
+    }
   }
 }
