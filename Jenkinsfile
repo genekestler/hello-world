@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        fileExists 'readme'
+        sh 'date'
       }
     }
   }
