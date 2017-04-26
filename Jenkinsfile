@@ -14,6 +14,7 @@ pipeline {
     stage('deploy') {
       steps {
         fileExists 'readme'
+        sh 'date'
       }
     }
   }
