@@ -38,7 +38,7 @@ pipeline {
     stage('deploy') {
       steps {
         echo 'we are deploying now'
-        sh 'date'
+        sh 'dat'
       }
     }
   }
