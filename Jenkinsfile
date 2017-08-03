@@ -8,12 +8,13 @@ pipeline {
     }
     stage('MVN Build') {
       steps {
-        sh 'mvn clean package'
+        sh 'mvn -Dmaven.test.failure.ignore clean package'
       }
     }
     stage('JUnit Results') {
       steps {
         junit(testResults: '**/target/surefire-reports/TEST-*.xml', allowEmptyResults: true)
+        archiveArtifacts(artifacts: 'target/*.jar', allowEmptyArchive: true)
       }
     }
   }
