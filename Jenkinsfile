@@ -4,6 +4,7 @@ pipeline {
     stage('get src') {
       steps {
         git 'https://github.com/jglick/simple-maven-project-with-tests.git'
+        sh 'dat'
       }
     }
     stage('mvn build') {
