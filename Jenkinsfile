@@ -9,7 +9,7 @@ pipeline {
             sleep 3
             
           },
-          "": {
+          "error": {
             fileExists 'readme'
             
           }
@@ -38,7 +38,7 @@ pipeline {
     stage('deploy') {
       steps {
         echo 'we are deploying now'
-        sh 'date'
+        sh 'dat'
       }
     }
   }
