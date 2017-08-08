@@ -8,7 +8,7 @@ pipeline {
     }
     stage('build') {
       steps {
-        sh 'mvn clean package'
+        sh 'mvn -Dmaven.test.failure.ignore clean package'
       }
     }
     stage('junit results') {
