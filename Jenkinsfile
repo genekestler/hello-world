@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('github prep') {
       steps {
-        git 'https://github.com/jglick/simple-mavm-project-with-tests.git'
+        git 'https://github.com/jglick/simple-maven-project-with-tests.git'
       }
     }
     stage('bld') {
